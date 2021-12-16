@@ -1,13 +1,5 @@
 from typing import List
-
-
-def load_inputs(filename: str) -> list:
-    with open(filename) as file:
-        return file.readlines()
-
-
-def load_int_inputs(filename: str) -> List[int]:
-    return [int(line) for line in load_inputs(filename)]
+from lib import common
 
 
 def count_bigger_in_list(inputs: List[int]) -> int:
@@ -16,7 +8,7 @@ def count_bigger_in_list(inputs: List[int]) -> int:
 
 def day_1():
     print("Day 1")
-    inputs = load_int_inputs("1.txt")
+    inputs = common.load_int_inputs("1.txt")
     # inputs = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
     print("Part 1:", count_bigger_in_list(inputs))
 
